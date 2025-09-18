@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Английский для детей без зубрёжки — Puzzle English</title>
+  <meta name="description" content="Онлайн-английский для детей: игры, мультики и тренировки. Скидка по промокоду.">
+  <meta property="og:title" content="Английский для детей без зубрёжки — Puzzle English">
+  <meta property="og:description" content="Обучение в форме игры. Начните сегодня и получите скидку по промокоду.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1604881985162-86b1b26b366e?q=80&w=1600&auto=format&fit=crop">
+  <meta name="theme-color" content="#6A5AE0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1221;
+      --card:#141834;
+      --muted:#98A2B3;
+      --text:#F8FAFC;
+      --accent:#7C5CFF;
+      --accent-2:#22D3EE;
+      --success:#10B981;
+      --warning:#F59E0B;
+      --radius:14px;
+      --shadow:0 20px 45px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 800px at 10% 10%, rgba(124,92,255,.25), transparent 40%), radial-gradient(1000px 600px at 90% 0%, rgba(34,211,238,.25), transparent 35%), var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:14px 20px;border-radius:12px;font-weight:600;
+      background:linear-gradient(135deg,var(--accent),#5C7CFF 70%);
+      box-shadow:0 12px 24px rgba(124,92,255,.35);
+      transition:transform .12s ease, box-shadow .12s ease;
+      color:#fff
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(124,92,255,.45)}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.18);box-shadow:none}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(34,211,238,.12);color:#CFFAFE;border:1px solid rgba(34,211,238,.35);font-size:13px}
+    header{
+      position:sticky;top:0;background:rgba(15,18,33,.7);
+      backdrop-filter:blur(10px);z-index:40;border-bottom:1px solid rgba(255,255,255,.08)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 20px rgba(34,211,238,.9)}
+    .hero{padding:76px 0 40px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .headline{font-size:44px;line-height:1.08;margin:10px 0 12px}
+    .subtitle{font-size:18px;color:var(--muted);max-width:560px}
+    .pill{margin-top:12px}
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:var(--radius);
+      padding:18px;box-shadow:var(--shadow)
+    }
+    .mock{aspect-ratio:4/5;border-radius:12px;background:linear-gradient(180deg,#23284d,#1a1f3f);
+      position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.06)
+    }
+    .bubble{position:absolute;inset:auto auto 14% 12%;background:#1d2245;border-radius:12px;padding:12px 14px;border:1px solid rgba(255,255,255,.08);display:flex;gap:10px;align-items:flex-start;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+    .bubble strong{display:block;font-size:14px}
+    .bubble p{margin:2px 0 0;color:#cbd5e1;font-size:13px}
+    .star{width:18px;height:18px;border-radius:6px;background:linear-gradient(135deg,#F59E0B,#FBBF24)}
+    .hero-cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    section{padding:56px 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);min-height:180px
+    }
+    .card h3{margin:2px 0 8px;font-size:18px}
+    .muted{color:var(--muted)}
+    .list{display:grid;gap:10px;margin:14px 0 0}
+    .list li{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--success);margin-top:6px;box-shadow:0 0 20px rgba(16,185,129,.6)}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .rev{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px}
+    .rev .name{font-weight:600;margin-top:8px}
+    .cta{
+      text-align:center;background:linear-gradient(180deg,rgba(124,92,255,.1),rgba(124,92,255,.02));
+      border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)
+    }
+    footer{padding:24px 0;color:#94A3B8;text-align:center}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .headline{font-size:34px}
+      .cards{grid-template-columns:1fr}
+      .reviews{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><span class="logo-dot"></span> BetterEnglish</div>
+      <nav style="display:flex;gap:18px;font-size:14px;">
+        <a href="#why">Почему детям сложно</a>
+        <a href="#how">Как работает</a>
+        <a href="#reviews">Отзывы</a>
+      </nav>
+      <a class="btn" href="AFFILIATE_LINK_HERE" target="_blank" rel="nofollow noopener">Получить скидку</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge pill">🎮 Учёба в форме игры</span>
+          <h1 class="headline">Английский для детей<br>без зубрёжки</h1>
+          <p class="subtitle">Puzzle English — интерактивный онлайн‑курс: тренировки, видео и мини‑игры.
+            Ребёнок учится с интересом, а вы контролируете прогресс.</p>
+          <div class="hero-cta">
+            <a class="btn" href="AFFILIATE_LINK_HERE" target="_blank" rel="nofollow noopener">Начать и получить скидку</a>
+            <a class="btn secondary" href="#how">Как это работает</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="mock">
+            <!-- decorative shapes -->
+            <svg width="100%" height="100%" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;opacity:.5">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1" y1="1" y2="0">
+                  <stop offset="0%" stop-color="#7C5CFF"/>
+                  <stop offset="100%" stop-color="#22D3EE"/>
+                </linearGradient>
+              </defs>
+              <circle cx="520" cy="100" r="140" fill="url(#g1)" opacity=".25"/>
+              <rect x="40" y="120" width="340" height="220" rx="16" fill="#121633" stroke="rgba(255,255,255,.08)"/>
+              <rect x="60" y="150" width="100" height="12" rx="6" fill="#9CA3AF"/>
+              <rect x="60" y="175" width="180" height="10" rx="5" fill="#6B7280"/>
+              <rect x="60" y="205" width="280" height="12" rx="6" fill="#7C5CFF" opacity=".6"/>
+              <rect x="60" y="235" width="220" height="10" rx="5" fill="#475569"/>
+            </svg>
+            <div class="bubble">
+              <div class="star"></div>
+              <div>
+                <strong>+15 новых слов</strong>
+                <p>за одно занятие в мини‑играх</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <h2 style="margin:0 0 12px">Почему детям сложно учить английский?</h2>
+        <p class="muted" style="margin:0 0 18px">Мы собрали типичные причины — и решили каждую из них.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Скучные занятия</h3>
+            <p class="muted">Однообразные упражнения и зубрёжка не вовлекают ребёнка.</p>
+            <ul class="list">
+              <li><span class="dot"></span><span>В Puzzle English — задания в формате игр и челленджей.</span></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Нет результата</h3>
+            <p class="muted">Учится «для галочки» и быстро всё забывает.</p>
+            <ul class="list">
+              <li><span class="dot"></span><span>Короткие ежедневные тренировки закрепляют слова и фразы.</span></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Трудно контролировать</h3>
+            <p class="muted">Родителям сложно понять прогресс.</p>
+            <ul class="list">
+              <li><span class="dot"></span><span>Удобный кабинет: видно, сколько выучено, какие навыки подтянуть.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <h2 style="margin:0 0 12px">Как это работает</h2>
+        <p class="muted">Три шага до первых результатов.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>1) Регистрация</h3>
+            <p class="muted">Создайте аккаунт для ребёнка. Первые уроки — бесплатно.</p>
+          </div>
+          <div class="card">
+            <h3>2) 15 минут в день</h3>
+            <p class="muted">Мини‑игры, мультики и практические задания под уровень ребёнка.</p>
+          </div>
+          <div class="card">
+            <h3>3) Отслеживайте прогресс</h3>
+            <p class="muted">Смотрите отчёты и поощряйте достижения бейджами.</p>
+          </div>
+        </div>
+        <div style="margin-top:18px">
+          <a class="btn" href="AFFILIATE_LINK_HERE" target="_blank" rel="nofollow noopener">Перейти на Puzzle English</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <h2 style="margin:0 0 12px">Отзывы родителей</h2>
+        <p class="muted" style="margin:0 0 18px">Реальные впечатления о курсе.</p>
+        <div class="reviews">
+          <div class="rev">
+            <div>«Сын стал смотреть мультфильмы на английском без субтитров через 2 месяца!»</div>
+            <div class="name">— Анна, 9 лет</div>
+          </div>
+          <div class="rev">
+            <div>«Наконец-то не приходится заставлять. Садится за планшет с удовольствием»</div>
+            <div class="name">— Игорь, 8 лет</div>
+          </div>
+          <div class="rev">
+            <div>«Удобно видеть прогресс в личном кабинете. Рекомендую!»</div>
+            <div class="name">— Марина, 10 лет</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2 style="margin:0 0 10px">Начните бесплатно уже сегодня</h2>
+        <p class="muted" style="margin:0 0 18px">А по промокоду получите дополнительную скидку 🎁</p>
+        <a class="btn" href="AFFILIATE_LINK_HERE" target="_blank" rel="nofollow noopener">Получить скидку</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2025 BetterEnglish. Не является официальным сайтом Puzzle English. Ссылка ведёт на сайт партнёра.</div>
+    </div>
+  </footer>
+
+  <script>
+    // smooth scroll for same-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
